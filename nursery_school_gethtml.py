@@ -41,12 +41,14 @@ if not os.path.exists("/nursery_school/"+replace_today+"nursery_school_html"+"/"
 for pref_num in ['01','02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15',
     '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32',
     '33', '34', '35', '36', '37', '38', '39', '40','41', '42', '43', '44', '45', '46', '47']:
+    
+    
     if not os.path.exists("/nursery_school/"+replace_today+"nursery_school_html"+"/"+replace_today+address[pref_num]+"/"):
         os.makedirs("/nursery_school/"+replace_today+"nursery_school_html"+"/"+replace_today+address[pref_num]+"/")
 
+    
     city_urllist = []
     city_num = []
-
 
 
     get_url_for_city = "http://nursery.a-lot.jp/search"+str(pref_num)+".html"
@@ -61,6 +63,7 @@ for pref_num in ['01','02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
     
     if (select_soup):
 
+        
         for option_soup in select_soup:
             option_num = option_soup.find_all('option')
 
