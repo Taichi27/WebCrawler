@@ -104,7 +104,7 @@ for pref_num in ['01','02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
                     time.sleep(1)
                     res = urllib.request.urlopen(req)
                     html = res.read().decode("shift-jis",errors='ignore')
-                    filename = "nursery_school/"+replace_today+"nursery_school_html"+"/"+replace_today+address[pref_num]+"/"+str(get_links_get)+".html"
+                    filename = "/nursery_school/"+replace_today+"nursery_school_html"+"/"+replace_today+address[pref_num]+"/"+str(get_links_get)+".html"
                     htmlfile = open(filename,"w",encoding="shift-jis",errors="ignore")
                     htmlfile.write(html)
                     htmlfile.close()
